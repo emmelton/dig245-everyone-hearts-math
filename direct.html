@@ -9,8 +9,9 @@
 <body>
   <h1>Davidson Self-Guided Tour</h1>
 
-  <p>Welcome to Davidson College! We are glad you are here. Today you are going on a self-guided tour where we will describe the prominent places on campus that you choose to visit; all descriptions also comes with some photographs! Please explore
-    and enjoy!
+  <p>Welcome to Davidson College! We are glad you are here. Today you are going on a
+    self-guided tour where we will describe the prominent places on campus that you
+    choose to visit! Please explore and enjoy!
     To travel, input the number that corresponds to your destination of choice.</p>
 <!--
   <form action="/Users/emma/Sites/critical-web-design/dig245-everyone-hearts-math/stAdmissions.html">
@@ -22,11 +23,11 @@
 
 -->
   <div id="tourValue"></div>
-  <p id="door"> Type 'begin' to start the tour. </p>
+  <p id="door">Type 'begin' to start the tour.</p>
 
   <input id="userInput" type="text"/>
 
-  <button onclick="myFunction()">Go</button>
+  <button onclick="myFunction()">go</button>
   ​
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script type="text/javascript">
@@ -40,7 +41,7 @@
       var acceptedResponses = ["begin", "Begin"];
       // allow that if accepted response is entered, then the tour will begin
       if (acceptedResponses.indexOf(tourValue) !== -1) {
-        door.innerHTML = "You have started your tour ";
+          window.open("admission.html", '_self');
         // caveat that if accepted response is not given, user is prompted for correct answer
       } else {
         door.innerHTML = "You must type 'begin'!";
