@@ -1,2 +1,34 @@
-
 /* css */
+
+/* START PAGE */
+
+/* TITLES */
+.titles {
+  font-size: 50px;
+  text-align: center;
+}
+
+/* BUTTON */
+.startTour {
+  text-align: inherit;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 10px;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  border-radius: 15%;
+  background-color: #D84747;
+  box-shadow: inset 2px 2px 3px rgba(184, 184, 184, .4),
+    inset -2px -2px 3px rgba(115, 115, 115, .4);
+}
+
+.startTour:hover {
+  background-color: #B03C3C;
+}
+
+.startTour:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+    inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
