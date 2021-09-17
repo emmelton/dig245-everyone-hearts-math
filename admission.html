@@ -23,50 +23,53 @@
   <br>
   <ul>
     <div id="tourValue"></div>
- <p id="options">Your options are to:</p>
-   <li>1: cross the street to The VAC</li>
-   <li>2: head to campus</li>
+    <p id="options">Your options are to:</p>
+    <li>1: cross the street to The VAC</li>
+    <li>2: cross the street to chambers</li>
 
-   <input id="userInput" type="text"/>
-   <button onclick="myFunction()">go</button>
-
-
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-   <script type="text/javascript">
-     //declare the function
-     function myFunction() {
-       // define the variable tourValue & get the userInput value
-       var tourValue = document.getElementById("userInput").value;
-       // define the variable tour & get apply to all elements class tour
-       var tour = document.getElementById("tour");
-       // define accepted response as begin or Begin
-       var acceptedResponses = ["1", "2", "3"];
-       // allow that if accepted response is entered, then the tour will begin
-       if (acceptedResponses.indexOf(tourValue) == 0) {
-         options.innerHTML = window.open("vac.html", '_self');
-         // caveat that if accepted response is not given, user is prompted for correct answer
-       } else if (acceptedResponses.indexOf(tourValue) == 1) {
-         options.innterHTML = window.open('chambers.html', '_self');
-       }
-       else {
-         options.innerHTML = "You must enter 1 or 2.";
-       }
-     }
-  //WHAT MUNDY EXPLAINED:
-        // check for responses
-        //      if (tourValue == "3") {
-        //        console.log("you typed 3");
-        //      } else if (tourValue == "2") {
-        //        console.log("you typed 2");
-        //      } else if (tourValue == "1") {
-        //        console.log("you typed 1");
-        //      } else {
-        // none of the above were met so show notification
-        //        options.innerHTML = "You must enter 1, 2, or 3.";
-        //      }
+    <input id="userInput" type="text" />
+    <button onclick="myFunction(userInput, [1, 2], "vac.html", "chambers.html", options)">go</button>
 
 
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/main.js">
+
+</script>
+
+  <!-- <script type="text/javascript">
+
+      //declare the function
+  //    function myFunction() {
+        // define the variable tourValue & get the userInput value
+//        var tourValue = document.getElementById("userInput").value;
+        // define the variable tour & get apply to all elements class tour
+        //       var tour = document.getElementById("tour");
+        // define accepted response as begin or Begin
+//        var acceptedResponses = ["1", "2", "3"];
+        // allow that if accepted response is entered, then the tour will begin
+//        if (acceptedResponses.indexOf(tourValue) == 0) {
+//          options.innerHTML = window.open("vac.html", '_self');
+          // caveat that if accepted response is not given, user is prompted for correct answer
+//        } else if (acceptedResponses.indexOf(tourValue) == 1) {
+//          options.innterHTML = window.open('chambers.html', '_self');
+//        } else {
+//          options.innerHTML = "You must enter 1 or 2.";
+//        }
+//      }
+      //WHAT MUNDY EXPLAINED:
+      // check for responses
+      //      if (tourValue == "3") {
+      //        console.log("you typed 3");
+      //      } else if (tourValue == "2") {
+      //        console.log("you typed 2");
+      //      } else if (tourValue == "1") {
+      //        console.log("you typed 1");
+      //      } else {
+      // none of the above were met so show notification
+      //        options.innerHTML = "You must enter 1, 2, or 3.";
+      //      }
+    </script>
+  -->
 </body>
 
 </html>
