@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>admissions</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>admissions</title>
+</head>
+
+<body>
+  <h4>Fast Facts</h4>
+  <ol>
+    <li>LOCATION: davidson college admissions office</li>
+    <li>ADDRESS: 405 N Main St, Davidson, NC 28035</li>
+    <li>PARKING: avaliable</li>
+    <li>INSIDE: davidson college admissions & financial aid offices</li>
+    <li>WORTH A VISIT? yes.</li>
+    <li>FAVORITE PART: it’s the first building most students experience</li>
+    <br>
+    <h4>Description</h4>
+    <br>
+  </ol>
+  <p>You begin at the Davidson College admissions office. You have just left your information session and have been let go to enjoy a self-guided tour. </p>
+  <br>
+  <ul>
     <div id="tourValue"></div>
-    <h4>Fast Facts</h4>
-    <ol>
-<li>LOCATION: davidson college admissions office</li>
-<li>ADDRESS: 405 N Main St, Davidson, NC 28035</li>
-<li>PARKING: avaliable</li>
-<li>INSIDE: davidson college admissions & financial aid offices</li>
-<li>WORTH A VISIT? yes.</li>
-<li>FAVORITE PART: it’s the first building most students experience</li>
-<br>
-      </ol>
-    <p>You begin at the Davidson College admissions office. You have just left your information session and have been let go to enjoy a self-guided tour. </p>
-    <ul>
-    <p id="door">Your options are to:<p>
-      <li>1: cross the street to “The VAC”</li>
-      <li>2: cross the street to “Campus”</li>
-<li>3: walk down the road toward “Glasgow Entrance”</li>
+ <p id="options">Your options are to:</p>
+   <li>1: cross the street to The VAC</li>
+   <li>2: head to campus</li>
 
-    <input id="userInput" type="text"/>
+   <input id="userInput" type="text"/>
+   <button onclick="myFunction()">go</button>
 
-    <button onclick="myFunction()">go</button>
-    ​
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      //declare the function
-      function myFunction() {
-        // define the variable tourValue & get the userInput value
-        var tourValue = document.getElementById("userInput").value;
-        // define the variable tour & get apply to all elements class tour
-        var tour = document.getElementById("tour");
-        // define accepted response as begin or Begin
-        var acceptedResponses = ["choice 1", "choice 2", "choice 3"];
-        // allow that if accepted response is entered, then the tour will begin
 
-        if (acceptedResponses.indexOf(tourValue) == 1) {
-          door.innerHTML = "1 works";
-          // caveat that if accepted response is not given, user is prompted for correct answer
-        } else if (acceptedResponses.indexOf(tourValue) == 'choice 2') {
-          door.innerHTML = "2 works";
-          // caveat that if accepted response is not given, user is prompted for correct answer
-} else if (acceptedResponses.indexOf(tourValue) == 'choice 3') {
-            door.innerHTML = "3 works";
-            // caveat that if accepted response is not given, user is prompted for correct answer
-          }
-        else {
-          door.innerHTML = "You may only choose choice 1, 2, or 3.";
-        }
-      }
-    </script>
-  </body>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+   <script type="text/javascript">
+     //declare the function
+     function myFunction() {
+       // define the variable tourValue & get the userInput value
+       var tourValue = document.getElementById("userInput").value;
+       // define the variable tour & get apply to all elements class tour
+       var tour = document.getElementById("tour");
+       // define accepted response as begin or Begin
+       var acceptedResponses = ["1", "2", "3"];
+       // allow that if accepted response is entered, then the tour will begin
+       if (acceptedResponses.indexOf(tourValue) == 0) {
+         options.innerHTML = window.open("vac.html", '_self');
+         // caveat that if accepted response is not given, user is prompted for correct answer
+       } else if (acceptedResponses.indexOf(tourValue) == 1) {
+         options.innterHTML = window.open('direct.html', '_self');
+       }
+       else {
+         options.innerHTML = "You must enter 1 or 2.";
+       }
+     }
+  //WHAT MUNDY EXPLAINED:
+        // check for responses
+        //      if (tourValue == "3") {
+        //        console.log("you typed 3");
+        //      } else if (tourValue == "2") {
+        //        console.log("you typed 2");
+        //      } else if (tourValue == "1") {
+        //        console.log("you typed 1");
+        //      } else {
+        // none of the above were met so show notification
+        //        options.innerHTML = "You must enter 1, 2, or 3.";
+        //      }
+
+
+  </script>
+</body>
+
 </html>

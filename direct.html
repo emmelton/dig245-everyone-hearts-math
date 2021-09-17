@@ -23,7 +23,7 @@
 
 -->
   <div id="tourValue"></div>
-  <p id="door">Type 'begin' to start the tour.</p>
+  <p id="options">Type 'begin' to start the tour.</p>
 
   <input id="userInput" type="text"/>
 
@@ -44,9 +44,10 @@
           window.open("admission.html", '_self');
         // caveat that if accepted response is not given, user is prompted for correct answer
       } else {
-        door.innerHTML = "You must type 'begin'!";
+        options.innerHTML = "You must type 'begin'!";
       }
     }
+
   </script>
 
 </body>

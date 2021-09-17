@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>VAC</title>
+</head>
+
+<body>
+  <h4>Fast Facts</h4>
+  <ol>
+    <li>LOCATION: katherine and tom belk visual arts center (The VAC)</li>
+    <li>ADDRESS: 315 N Main St, Davidson, NC 28036</li>
+    <li>PARKING: avaliable</li>
+    <li>INSIDE: the home for studio and historical art, the Van Every/Smith Galleries, and the Semans Lecture Hall</li>
+    <li>WORTH A VISIT? yes.</li>
+    <li>FAVORITE PART: the amazing natural light</li>
+    <br>
+    <h4>Description</h4>
+    <br>
+  </ol>
+  <p>You crossed the street to the VAC. The VAC is a 43,000 square foot, state-of-the-art facility that is the central home to Art History and Studio Art going ons of Davidson’s campus. In this building is also the Van Every/Smith Galleries that are open to the public. The gallery houses rotating exhibits that include work by students, faculty, regional, national, and international artists. Furthermore the building included the Semans Lecture Hall that is best designed for ideal for art history courses.</p>
+  <br>
+  <ul>
+    <div id="tourValue"></div>
+    <p id="options">Your options are to:</p>
+    <li>1: go into town</li>
+    <li>2: cross the street to campus</li>
+    <li>3: go back to admissions office</li>
+
+    <input id="userInput" type="text" />
+    <button onclick="myFunction()">go</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      //declare the function
+      function myFunction() {
+        // define the variable tourValue & get the userInput value
+        var tourValue = document.getElementById("userInput").value;
+        // define the variable tour & get apply to all elements class tour
+        var tour = document.getElementById("tour");
+        // define accepted response as begin or Begin
+        var acceptedResponses = ["1", "2", "3"];
+        // allow that if accepted response is entered, then the tour will begin
+        if (acceptedResponses.indexOf(tourValue) == 0) {
+          options.innerHTML = window.open("direct.html", '_self');
+          // caveat that if accepted response is not given, user is prompted for correct answer
+        } else if (acceptedResponses.indexOf(tourValue) == 1) {
+          options.innterHTML = window.open('https://www.google.com/?client=safari', '_self');
+        } else if (acceptedResponses.indexOf(tourValue) == 2) {
+          options.innterHTML = window.open('https://www.davidson.edu', '_self')
+        } else {
+          options.innerHTML = "You must enter 1, 2, or 3.";
+        }
+      }
+    </script>
+</body>
+
+</html>
