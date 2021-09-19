@@ -1,75 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
+  <!-- meta tags, links to css, etc. -->
+  <title>Davidson :hearts: Tours</title>
+  <link href="assets/css/styles.css" rel="stylesheet">
   <meta charset="utf-8">
-  <title>admissions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body>
-  <h4>Fast Facts</h4>
-  <ol>
-    <li>LOCATION: davidson college admissions office</li>
-    <li>ADDRESS: 405 N Main St, Davidson, NC 28035</li>
-    <li>PARKING: avaliable</li>
-    <li>INSIDE: davidson college admissions & financial aid offices</li>
-    <li>WORTH A VISIT? yes.</li>
-    <li>FAVORITE PART: it’s the first building most students experience</li>
-    <br>
-    <h4>Description</h4>
-    <br>
-  </ol>
-  <p>You begin at the Davidson College admissions office. You have just left your information session and have been let go to enjoy a self-guided tour. </p>
-  <br>
-  <ul>
-    <div id="tourValue"></div>
-    <p id="options">Your options are to:</p>
-    <li>1: cross the street to The VAC</li>
-    <li>2: cross the street to chambers</li>
+  <!-- visible content goes here -->
 
-    <input id="userInput" type="text" />
-    <button onclick="myFunction(userInput, [1, 2], "vac.html", "chambers.html", options)">go</button>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/main.js">
-
-</script>
-
-  <!-- <script type="text/javascript">
-
-      //declare the function
-  //    function myFunction() {
-        // define the variable tourValue & get the userInput value
-//        var tourValue = document.getElementById("userInput").value;
-        // define the variable tour & get apply to all elements class tour
-        //       var tour = document.getElementById("tour");
-        // define accepted response as begin or Begin
-//        var acceptedResponses = ["1", "2", "3"];
-        // allow that if accepted response is entered, then the tour will begin
-//        if (acceptedResponses.indexOf(tourValue) == 0) {
-//          options.innerHTML = window.open("vac.html", '_self');
-          // caveat that if accepted response is not given, user is prompted for correct answer
-//        } else if (acceptedResponses.indexOf(tourValue) == 1) {
-//          options.innterHTML = window.open('chambers.html', '_self');
-//        } else {
-//          options.innerHTML = "You must enter 1 or 2.";
-//        }
-//      }
-      //WHAT MUNDY EXPLAINED:
-      // check for responses
-      //      if (tourValue == "3") {
-      //        console.log("you typed 3");
-      //      } else if (tourValue == "2") {
-      //        console.log("you typed 2");
-      //      } else if (tourValue == "1") {
-      //        console.log("you typed 1");
-      //      } else {
-      // none of the above were met so show notification
-      //        options.innerHTML = "You must enter 1, 2, or 3.";
-      //      }
-    </script>
-  -->
+  <!-- START BUTTON -->
+  <section id="four">
+    <div class="container">
+      <div class="four-top">
+        <div class="section-heading">
+          <div class="title">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>Admissions</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="four-features four-features-left-bottom">
+            <div class="features-img">
+              <img src="assets/img/davidson.admissions2-0849032.jpg" alt="Responsive image" class="img-responsive">
+            </div>
+            <div class="features-content">
+              <h3>fast Facts</h3>
+              <ol>
+                <li>LOCATION: davidson college admissions office</li>
+                <li>ADDRESS: 405 N Main St, Davidson, NC 28035</li>
+                <li>PARKING: avaliable</li>
+                <li>INSIDE: davidson college admissions & financial aid offices</li>
+                <li>WORTH A VISIT? yes.</li>
+                <li>FAVORITE PART: it’s the first building most students experience</li>
+                <br>
+                <br>
+              </ol>
+              <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="four-features four-features-right-bottom">
+            <img src="assets/img/davidson.admissions2-0849032.jpg" alt="Responsive image" class="img-responsive">
+            <div class="features-content">
+              <h3>Description</h3>
+              <p>You begin at the Davidson College admissions office. You have just left your information session and have been let go to enjoy a self-guided tour. </p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="four-features four-features-right-bottom">
+          <img src="assets/img/davidson.admissions2-0849032" alt="Responsive image" class="img-responsive">
+          <div class="features-content">
+              <div id="tourValue"></div>
+              <p id="options">Your options are to:</p>
+            <li>1: go to Main Street</li>
+              <li>2: cross the street to The VAC</li>
+              <li>3: cross the street to Chambers</li>
+              <input id="userInput" type="text" />
+              <button onclick="myFunction()">go</button>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+              <script type="text/javascript">
+                //declare the function
+                function myFunction() {
+                  // define the variable tourValue & get the userInput value
+                  var tourValue = document.getElementById("userInput").value;
+                  // define the variable tour & get apply to all elements class tour
+                  var tour = document.getElementById("tour");
+                  // define accepted response as begin or Begin
+                  var acceptedResponses = ["1", "2", "3"];
+                  // allow that if accepted response is entered, then the tour will begin
+                  if (acceptedResponses.indexOf(tourValue) == 0) {
+                    options.innerHTML = window.open("mainst.html", '_self');
+                    // caveat that if accepted response is not given, user is prompted for correct answer
+                  } else if (acceptedResponses.indexOf(tourValue) == 1) {
+                    options.innterHTML = window.open('vac.html', '_self');
+                  } else if (acceptedResponses.indexOf(tourValue) == 2) {
+                    options.innterHTML = window.open('chambers.html', '_self')
+                  } else {
+                    options.innerHTML = "You must enter 1, 2, or 3.";
+                  }
+                }
+              </script>
+            </div>
+            <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <a href="#" class="btn btn-expand-all">EXPAND ALL</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- BEGIN JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/Js/func.js"></script>
 </body>
 
 </html>

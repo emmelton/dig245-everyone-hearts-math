@@ -1,61 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
+  <!-- meta tags, links to css, etc. -->
+  <title>Davidson :hearts: Tours</title>
+  <link href="assets/css/styles.css" rel="stylesheet">
   <meta charset="utf-8">
-  <title>Chambers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body>
-  <h4>Fast Facts</h4>
-  <ol>
-    <li>LOCATION: chambers building in the center of Davidson's campus.</li>
+  <!-- visible content goes here -->
+
+  <!-- START BUTTON -->
+  <section id="four">
+    <div class="container">
+      <div class="four-top">
+        <div class="section-heading">
+          <div class="title">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>Chambers</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="four-features four-features-left-bottom">
+            <div class="features-img">
+              <img src="assets/img/chambers1.jpg" alt="Responsive image" class="img-responsive">
+            </div>
+            <div class="features-content">
+              <h3>Fast Facts</h3>
+              <ol>
+                <li>LOCATION: chambers building in the center of Davidson's campus.</li>
     <li>ADDRESS: 200 D Road; it is not directly off driving-roads but requires walking.</li>
     <li>PARKING: not at the building. avaliable along Main Street, Concord Road, or in public parking at Baker Sports Complex.</li>
     <li>INSIDE: Classrooms for many non-arts and non-science majors, offices of faculty, and the Registrar's Office.</li>
     <li>WORTH A VISIT? the outside.</li>
     <li>FAVORITE PART: Chambers lawn that frames the building so well.</li>
-    <br>
-    <h4>Description</h4>
-    <br>
-  </ol>
-  <p>You went onto campus to Chambers, the primary classroom building and academic center of campus. Inside, Davidson students attend class, visit and meet with professors, and stop by some administrative offices. The building often has students
+               <br>
+                <br>
+              </ol>
+              <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="four-features four-features-right-bottom">
+            <img src="assets/img/chambers2.jpg" alt="Responsive image" class="img-responsive">
+            <div class="features-content">
+              <h3>Description</h3>
+              <p>You went onto campus to Chambers, the primary classroom building and academic center of campus. Inside, Davidson students attend class, visit and meet with professors, and stop by some administrative offices. The building often has students
     outside on its front lawn as they sit with friends, do coursework, or hammock.</p>
-  <br>
-  <ul>
-    <div id="tourValue"></div>
-    <p id="options">Your options are to:</p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="four-features four-features-right-bottom">
+          <img src="assets/img/chambers2" alt="Responsive image" class="img-responsive">
+          <div class="features-content">
+              <div id="tourValue"></div>
+              <p id="options">Your options are to:</p>
     <li>1: go to Wall</li>
     <li>2: go to Sloan</li>
-    <li>3: go to Dorms</li>
-
-    <input id="userInput" type="text" />
-    <button onclick="myFunction()">go</button>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      //declare the function
-      function myFunction() {
-        // define the variable tourValue & get the userInput value
-        var tourValue = document.getElementById("userInput").value;
-        // define the variable tour & get apply to all elements class tour
-        var tour = document.getElementById("tour");
-        // define accepted response as begin or Begin
-        var acceptedResponses = ["1", "2", "3"];
-        // allow that if accepted response is entered, then the tour will begin
-        if (acceptedResponses.indexOf(tourValue) == 0) {
-          options.innerHTML = window.open("mainst.html", '_self');
-          // caveat that if accepted response is not given, user is prompted for correct answer
-        } else if (acceptedResponses.indexOf(tourValue) == 1) {
-          options.innterHTML = window.open('chambers.html', '_self');
-        } else if (acceptedResponses.indexOf(tourValue) == 2) {
-          options.innterHTML = window.open('admission.html', '_self')
-        } else {
-          options.innerHTML = "You must enter 1, 2, or 3.";
-        }
-      }
-    </script>
+    <li>3: go to Admissions</li>
+              <input id="userInput" type="text" />
+              <button onclick="myFunction()">go</button>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+              <script type="text/javascript">
+                //declare the function
+                function myFunction() {
+                  // define the variable tourValue & get the userInput value
+                  var tourValue = document.getElementById("userInput").value;
+                  // define the variable tour & get apply to all elements class tour
+                  var tour = document.getElementById("tour");
+                  // define accepted response as begin or Begin
+                  var acceptedResponses = ["1", "2", "3"];
+                  // allow that if accepted response is entered, then the tour will begin
+                  if (acceptedResponses.indexOf(tourValue) == 0) {
+                    options.innerHTML = window.open("wall.html", '_self');
+                    // caveat that if accepted response is not given, user is prompted for correct answer
+                  } else if (acceptedResponses.indexOf(tourValue) == 1) {
+                    options.innterHTML = window.open('sloan.html', '_self');
+                  } else if (acceptedResponses.indexOf(tourValue) == 2) {
+                    options.innterHTML = window.open('admission.html', '_self')
+                  } else {
+                    options.innerHTML = "You must enter 1, 2, or 3.";
+                  }
+                }
+              </script>
+            </div>
+            <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <a href="#" class="btn btn-expand-all">EXPAND ALL</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- BEGIN JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/Js/func.js"></script>
 </body>
 
 </html>
