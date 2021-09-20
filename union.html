@@ -12,82 +12,39 @@
 </head>
 
 <body>
-  <!-- visible content goes here -->
-
-  <!-- START BUTTON -->
-  <section id="four">
-    <div class="container">
-      <div class="four-top">
-        <div class="section-heading">
-          <div class="title">
-            <div class="row">
-              <div class="col-md-12">
-                <h2>Union</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="four-features four-features-left-bottom">
-            <div class="features-img">
-              <img src="assets/img/union1.jpg" alt="Responsive image" class="img-responsive">
-            </div>
-            <div class="features-content">
-              <h3>Fast Facts</h3>
-              <ol>
-                <li>LOCATION: Alvarez College Union.</li>
-                <li>ADDRESS: 207 Faculty Dr, Davidson, NC 28036</li>
-                <li>PARKING: not at the building. available in the Baker Sports Complex lot with handicap parking available directly behind the campus center.</li>
-                <li>INSIDE: Davis Cafe, Davidson Outdoors, the Sprinke Room, Nisbet Fitness Center, Civic Engagement offices, College Union Board offices, the Chaplains office, and other rooms and seating</li>
-                <li>WORTH A VISIT? yes.</li>
-                <li>FAVORITE PART: the couches where friends can gather.</li>
-              </ol>
-              <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="four-features four-features-right-bottom">
-            <img src="assets/img/union2.jpg" alt="Responsive image" class="img-responsive">
-            <div class="features-content">
-              <h3>Description</h3>
-              <p>You went to the Union, home to a variety of student activites, a gym, a public-use piano, and the Davis Cafe. It is for students to meet, gather, study, eat, and workout in.</p>
-              <br>
-              <br>
-              <br>
-              <br>
-              <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="four-features four-features-right-bottom">
-
-          <div class="features-content">
-            <div id="tourValue"></div>
-            <p id="options">Your options are to:</p>
-            <ol>
-              <li>go to the Library</li>
-              <li>go to the Commons</li>
-            </ol>
-          </div>
-          <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-
+  <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <a href="#" class="btn btn-expand-all">EXPAND ALL</a>
+      <div class="col">
+        <h2>Union</h2>
       </div>
     </div>
-
-  </section>
+    <div class="row">
+      <div class="col">
+        <div class="features-img">
+          <img src="assets/img/union1.jpg" alt="Responsive image" class="img-responsive">
+        </div>
+        <div class="features-content">
+          <h3>Fast Facts</h3>
+          <ol>
+            <li>LOCATION: Alvarez College Union.</li>
+            <li>ADDRESS: 207 Faculty Dr, Davidson, NC 28036</li>
+            <li>PARKING: not at the building. available in the Baker Sports Complex lot with handicap parking available directly behind the campus center.</li>
+            <li>INSIDE: Davis Cafe, Davidson Outdoors, the Sprinke Room, Nisbet Fitness Center, Civic Engagement offices, College Union Board offices, the Chaplains office, and other rooms and seating</li>
+            <li>WORTH A VISIT? yes.</li>
+            <li>FAVORITE PART: the couches where friends can gather.</li>
+          </ol>
+        </div>
+        <h3>Description</h3>
+        <p>You went to the Union, home to a variety of student activites, a gym, a public-use piano, and the Davis Cafe. It is for students to meet, gather, study, eat, and workout in.</p>
+        <div id="tourValue"></div>
+        <p id="options">Your options are to:</p>
+        <ol>
+          <li>go to the Library</li>
+          <li>go to the Commons</li>
+        </ol>
+      </div>
+    </div>
+  </div>
   <!-- BEGIN JS -->
   <input id="userInput" type="text" />
   <button onclick="myFunction()">go</button>
@@ -103,17 +60,15 @@
       var acceptedResponses = ["1", "2", "3"];
       // allow that if accepted response is entered, then the tour will begin
       if (acceptedResponses.indexOf(tourValue) == 0) {
-        options.innerHTML = window.open("libs.html", '_self');
+        window.open("libs.html", '_self');
         // caveat that if accepted response is not given, user is prompted for correct answer
       } else if (acceptedResponses.indexOf(tourValue) == 1) {
-        options.innerHTML = window.open('commons.html', '_self');
+        window.open('commons.html', '_self');
       } else {
         options.innerHTML = "You must enter 1, 2, or 3.";
       }
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-  <script src="assets/js/func.js"></script>
 </body>
 
 </html>
