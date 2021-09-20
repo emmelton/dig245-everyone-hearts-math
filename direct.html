@@ -17,7 +17,7 @@
   <div id="tourValue"></div>
   <p id="options">Type 'begin' to start the tour.</p>
 
-  <input id="userInput" type="text"/>
+  <input id="userInput" type="text" />
 
   <button onclick="myFunction()">go</button>
   ​
@@ -33,13 +33,12 @@
       var acceptedResponses = ["begin", "Begin"];
       // allow that if accepted response is entered, then the tour will begin
       if (acceptedResponses.indexOf(tourValue) !== -1) {
-          window.open("admission.html", '_self');
+        window.open("admission.html", '_self');
         // caveat that if accepted response is not given, user is prompted for correct answer
       } else {
         options.innerHTML = "You must type 'begin'!";
       }
     }
-
   </script>
 
 </body>

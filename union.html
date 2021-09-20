@@ -39,12 +39,12 @@
             <div class="features-content">
               <h3>Fast Facts</h3>
               <ol>
-<li>LOCATION: Alvarez College Union.</li>
-    <li>ADDRESS: 207 Faculty Dr, Davidson, NC 28036</li>
-    <li>PARKING: not at the building. available in the Baker Sports Complex lot with handicap parking available directly behind the campus center.</li>
-    <li>INSIDE: Davis Cafe, Davidson Outdoors, the Sprinke Room, Nisbet Fitness Center, Civic Engagement offices, College Union Board offices, the Chaplains office, and other rooms and seating</li>
-    <li>WORTH A VISIT? yes.</li>
-    <li>FAVORITE PART: the couches where friends can gather.</li>
+                <li>LOCATION: Alvarez College Union.</li>
+                <li>ADDRESS: 207 Faculty Dr, Davidson, NC 28036</li>
+                <li>PARKING: not at the building. available in the Baker Sports Complex lot with handicap parking available directly behind the campus center.</li>
+                <li>INSIDE: Davis Cafe, Davidson Outdoors, the Sprinke Room, Nisbet Fitness Center, Civic Engagement offices, College Union Board offices, the Chaplains office, and other rooms and seating</li>
+                <li>WORTH A VISIT? yes.</li>
+                <li>FAVORITE PART: the couches where friends can gather.</li>
               </ol>
               <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
             </div>
@@ -69,38 +69,17 @@
         <div class="four-features four-features-right-bottom">
           <img src="assets/images/08.jpg" alt="Responsive image" class="img-responsive">
           <div class="features-content">
-              <div id="tourValue"></div>
-              <p id="options">Your options are to:</p>
-    <li>1: go to the Library</li>
-    <li>2: go to the Commons</li>
-              <input id="userInput" type="text" />
-              <button onclick="myFunction()">go</button>
-              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-              <script>
-                //declare the function
-                function myFunction() {
-                  // define the variable tourValue & get the userInput value
-                  var tourValue = document.getElementById("userInput").value;
-                  // define the variable tour & get apply to all elements class tour
-                  var tour = document.getElementById("tour");
-                  // define accepted response as begin or Begin
-                  var acceptedResponses = ["1", "2", "3"];
-                  // allow that if accepted response is entered, then the tour will begin
-                  if (acceptedResponses.indexOf(tourValue) == 0) {
-                    options.innerHTML = window.open("libs.html", '_self');
-                    // caveat that if accepted response is not given, user is prompted for correct answer
-                  } else if (acceptedResponses.indexOf(tourValue) == 1) {
-                    options.innterHTML = window.open('commons.html', '_self');
-                  } else {
-                    options.innerHTML = "You must enter 1, 2, or 3.";
-                  }
-                }
-              </script>
-            </div>
-            <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+            <div id="tourValue"></div>
+            <p id="options">Your options are to:</p>
+            <ol>
+              <li>go to the Library</li>
+              <li>go to the Commons</li>
+            </ol>
           </div>
+          <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
         </div>
       </div>
+    </div>
 
     <div class="row">
       <div class="col-md-12">
@@ -110,6 +89,29 @@
 
   </section>
   <!-- BEGIN JS -->
+  <input id="userInput" type="text" />
+  <button onclick="myFunction()">go</button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script>
+    //declare the function
+    function myFunction() {
+      // define the variable tourValue & get the userInput value
+      var tourValue = document.getElementById("userInput").value;
+      // define the variable tour & get apply to all elements class tour
+      var tour = document.getElementById("tour");
+      // define accepted response as begin or Begin
+      var acceptedResponses = ["1", "2", "3"];
+      // allow that if accepted response is entered, then the tour will begin
+      if (acceptedResponses.indexOf(tourValue) == 0) {
+        options.innerHTML = window.open("libs.html", '_self');
+        // caveat that if accepted response is not given, user is prompted for correct answer
+      } else if (acceptedResponses.indexOf(tourValue) == 1) {
+        options.innterHTML = window.open('commons.html', '_self');
+      } else {
+        options.innerHTML = "You must enter 1, 2, or 3.";
+      }
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="assets/js/func.js"></script>
 </body>
