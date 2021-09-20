@@ -1,54 +1,118 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>MainSt</title>
-  </head>
-  <body>
-    <h4>Fast Facts</h4>
-    <ol>
-      <li>LOCATION: davidson main street</li>
+<html lang="en">
+
+<head>
+  <!-- meta tags, links to css, etc. -->
+  <title>Davidson :hearts: Tours</title>
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+  <!-- visible content goes here -->
+
+  <!-- START BUTTON -->
+  <section id="four">
+    <div class="container">
+      <div class="four-top">
+        <div class="section-heading">
+          <div class="title">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>Main Street</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="four-features four-features-left-bottom">
+            <div class="features-img">
+              <img src="assets/img/mainstreet90274093.png" alt="Responsive image" class="img-responsive">
+            </div>
+            <div class="features-content">
+              <h3>Fast Facts</h3>
+              <ol>
+    <li>LOCATION: davidson main street</li>
       <li>ADDRESS: S. Main Street, Davidson NC</li>
       <li>PARKING: avaliable</li>
       <li>INSIDE: bustling people, local shops</li>
       <li>WORTH A VISIT? yes.</li>
       <li>FAVORITE PART: bookshop trips or coffee dates with my friends</li>
-      <br>
-      <h4>Description</h4>
-      <br>
-    </ol>
-    <p>You chose to go into town. This is Davidson Main Street, the home to town socializing and many town-favorites for food and fun. Whether you’re on Main for a trip to CVS, ice cream at Ben & Jerry’s, food at The Famous Toastry, The Soda Shop, or Kindred, books at Main Street Bookstore, or coffee from Good Drip or Davidson-founded Summitt Coffee, there’s something for everyone. </p>
-    <br>
-    <ul>
-      <div id="tourValue"></div>
-      <p id="options">Your options are to:</p>
-      <li>1: go to campus</li>
+               <br>
+                <br>
+              </ol>
+              <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="four-features four-features-right-bottom">
+            <img src="assets/img/davidsonmain21.png" alt="Responsive image" class="img-responsive">
+            <div class="features-content">
+              <h3>Description</h3>
+              <p>You chose to go into town. This is Davidson Main Street, the home to town socializing and many town-favorites for food and fun. Whether you’re on Main for a trip to CVS, ice cream at Ben & Jerry’s, food at The Famous Toastry, The Soda Shop, or Kindred, books at Main Street Bookstore, or coffee from Good Drip or Davidson-founded Summitt Coffee, there’s something for everyone.</p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="four-features four-features-right-bottom">
+          <div class="features-content">
+              <div id="tourValue"></div>
+              <p id="options">Your options are to:</p>
+      <li>1: go to Chambers</li>
       <li>2: go to the VAC</li>
+              <input id="userInput" type="text" />
+              <button onclick="myFunction()">go</button>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+              <script type="text/javascript">
+                //declare the function
+                function myFunction() {
+                  // define the variable tourValue & get the userInput value
+                  var tourValue = document.getElementById("userInput").value;
+                  // define the variable tour & get apply to all elements class tour
+                  var tour = document.getElementById("tour");
+                  // define accepted response as begin or Begin
+                  var acceptedResponses = ["1", "2", "3"];
+                  // allow that if accepted response is entered, then the tour will begin
+                  if (acceptedResponses.indexOf(tourValue) == 0) {
+                    options.innerHTML = window.open("chambers.html", '_self');
+                    // caveat that if accepted response is not given, user is prompted for correct answer
+                  } else if (acceptedResponses.indexOf(tourValue) == 1) {
+                    options.innterHTML = window.open('vac.html', '_self');
+                  } else {
+                    options.innerHTML = "You must enter 1, 2, or 3.";
+                  }
+                }
+              </script>
+            </div>
+            <a href="#" class="btn btn-learn-more">LEARN MORE <i class="ion-ios-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <a href="#" class="btn btn-expand-all">EXPAND ALL</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- BEGIN JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/Js/func.js"></script>
+</body>
 
-      <input id="userInput" type="text" />
-      <button onclick="myFunction()">go</button>
-
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-      <script type="text/javascript">
-        //declare the function
-        function myFunction() {
-          // define the variable tourValue & get the userInput value
-          var tourValue = document.getElementById("userInput").value;
-          // define the variable tour & get apply to all elements class tour
-          var tour = document.getElementById("tour");
-          // define accepted response as begin or Begin
-          var acceptedResponses = ["1", "2", "3"];
-          // allow that if accepted response is entered, then the tour will begin
-          if (acceptedResponses.indexOf(tourValue) == 0) {
-            options.innerHTML = window.open("chambers.html", '_self');
-            // caveat that if accepted response is not given, user is prompted for correct answer
-          } else if (acceptedResponses.indexOf(tourValue) == 1) {
-            options.innterHTML = window.open('vac.html', '_self');
-          } else {
-            options.innerHTML = "You must enter 1, 2, or 3.";
-          }
-        }
-      </script>
-  </body>
 </html>
